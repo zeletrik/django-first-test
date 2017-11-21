@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Django default">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="DJANGO1_DBMS">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="VOTE_DBMS"/>
+    <table id="9" parent="2" name="USERS"/>
+    <column id="10" parent="9" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="11" parent="9" name="USER_NAME">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="9" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="9" name="EMAIL">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="9" name="POSITION">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="15" parent="9" name="EMAIL">
+      <ColNames>EMAIL</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="16" parent="9" name="USER_NAME">
+      <ColNames>USER_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="17" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="18" parent="9" name="USER_NAME">
+      <ColNames>USER_NAME</ColNames>
+      <UnderlyingIndexName>USER_NAME</UnderlyingIndexName>
+    </key>
+    <key id="19" parent="9" name="EMAIL">
+      <ColNames>EMAIL</ColNames>
+      <UnderlyingIndexName>EMAIL</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
